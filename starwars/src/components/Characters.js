@@ -3,7 +3,12 @@ import './Characters.scss';
 
 class Characters extends React.Component {
   render() {
-    return <div className='char-card'>{this.props.charInState.name}</div>;
+    return (
+      <div className='char-card'>
+        <p className='char-name'>{this.props.charInState.name}</p>
+        <p className='char-gender'>Gender: {this.props.charInState.gender}</p>
+      </div>
+    );
   }
 }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // importing character component
 import Characters from './components/Characters';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   // setting state

@@ -1,6 +1,21 @@
 .char-card {
-  border: 3px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(180, 212, 255, 0.3);
+  border-radius: 7px;
+  box-shadow: 1px 1px 3px black;
   padding: 3rem;
-  margin: 1rem;
-  width: 300px;
+  margin: 5rem 0;
+  width: 500px;
+  text-align: left;
+}
+
+.char-name {
+  font-size: 3.2rem;
+  font-family: 'Ranga', cursive;
+}
+
+.char-gender {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-family: 'Poppins';
 }
