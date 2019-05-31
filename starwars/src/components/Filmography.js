@@ -1,4 +1,5 @@
 import React from 'react';
+import '../components/Filmography.scss';
 
 class Filmography extends React.Component {
   render() {
