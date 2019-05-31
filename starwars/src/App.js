@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+
+// importing character component
 import Characters from './components/Characters';
 import './App.css';
 
 class App extends Component {
+  // setting state
   constructor() {
     super();
     this.state = {
       starwarsChars: []
     };
   }
-
+  // api call ------
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
   }
@@ -29,15 +32,17 @@ class App extends Component {
         throw new Error(err);
       });
   };
+  // end api call ------
 
   render() {
     return (
       <div className='App'>
         <h1 className='Header'>React Wars</h1>
-        <Characters
-          className='character-container'
-          characters={this.state.starwarsChars}
-        />
+        <div className='character-list'>
+          {this.state.starwarsChars.map(charBios => (
+            <Characters charInState={charBios} />
+          ))}
+        </div>
       </div>
     );
   }
