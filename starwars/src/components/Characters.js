@@ -34,7 +34,7 @@ class Characters extends React.Component {
   render() {
     return (
       <div className='char-card'>
-        <div class='char-info'>
+        <div className='char-info'>
           <p className='char-name'>{this.props.charInState.name}</p>
           <ul>
             <li className='char-stat'>
@@ -47,7 +47,7 @@ class Characters extends React.Component {
               Birth year: {this.props.charInState.birth_year}
             </li>
             <div className='filmography'>
-              <h1 class='filmography-header'>Filmography:</h1>
+              <h1 className='filmography-header'>Filmography:</h1>
               {this.state.films.map((film, index) => (
                 <Filmography filmInState={film} indexCount={index} />
               ))}
