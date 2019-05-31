@@ -6,7 +6,15 @@ class Characters extends React.Component {
     return (
       <div className='char-card'>
         <p className='char-name'>{this.props.charInState.name}</p>
-        <p className='char-gender'>Gender: {this.props.charInState.gender}</p>
+        <ul>
+          <li className='char-stat'>Gender: {this.props.charInState.gender}</li>
+          <li className='char-stat'>
+            Eye color: {this.props.charInState.eye_color}
+          </li>
+          <li className='char-stat'>
+            Birth year: {this.props.charInState.birth_year}
+          </li>
+        </ul>
       </div>
     );
   }
