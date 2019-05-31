@@ -1,6 +1,7 @@
 .film-title {
   font-size: 1.6rem;
   font-family: 'Poppins';
+  font-weight: 700;
 }
 
 .film-crawl {
@@ -14,4 +15,9 @@
   border-radius: 3px;
   margin: 0.5rem;
   padding: 1.5rem;
+}
+
+.text-truncate {
+  font-size: 1.6rem;
+  font-family: 'Poppins';
 }

@@ -93,5 +93,10 @@ th {
   margin: 3rem;
 }
 
-.character-list {
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: #443e3e;
+  }
 }
