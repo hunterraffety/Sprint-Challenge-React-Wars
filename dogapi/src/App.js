@@ -19,7 +19,7 @@ class App extends React.Component {
       })
       .then(data => {
         console.log(data);
-        this.setState({ dogs: data.message });
+        this.setState({ dogs: data.message, isLoading: true });
       })
       .catch(err => {
         throw new Error(`f`, err);
@@ -28,6 +28,13 @@ class App extends React.Component {
 
   newDog = e => {
     console.log(e);
+    e.preventDefault();
+    fetch('https://dog.ceo/api/breeds/image/random/1')
+      .then(res => res.json())
+      .then(data => this.setState({ dogs: data.message }))
+      .catch(err => {
+        throw new Error(`uh oh a-aron`, err);
+      });
   };
 
   render() {
@@ -39,7 +46,11 @@ class App extends React.Component {
             <img src={dog} />
           ))}
         </div>
-        <button onClick={this.newDog}>Gimme a new one</button>
+        <form>
+          <button onClick={this.newDog} alt='random dooooog'>
+            Gimme a new one
+          </button>
+        </form>
       </div>
     );
   }
