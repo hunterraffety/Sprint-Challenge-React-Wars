@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Characters = props => {
-  console.log(props);
-  return <h1>Return from Characters</h1>;
-};
+class Characters extends React.Component {
+  render() {
+    return <div className='char-card'>{this.props.charInState.birth_year}</div>;
+  }
+}
 
 export default Characters;
