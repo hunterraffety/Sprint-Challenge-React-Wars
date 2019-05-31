@@ -4,9 +4,13 @@ import TextTruncate from 'react-text-truncate';
 
 class Filmography extends React.Component {
   howManyResults = props => {
-    if (this.props.filmInState.title.length >= 3) {
-      console.log(`okayasdas`);
-    }
+    console.log(this.props.filmInState);
+    // const filmList = this.props.filmInState;
+    // const test = [];
+    // test.push(filmList);
+    // test.slice(0, 2);
+    // console.log(`whhhat`, test);
+    // test.length >= 3 ? console.log(`3+`) : console.log(`less than 100`);
   };
 
   render() {
